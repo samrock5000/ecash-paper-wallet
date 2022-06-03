@@ -11,10 +11,9 @@ import {
 } from '@bitauth/libauth'
 import QR from './QR.svelte'
 
-
 let newWallet;
-$: newByreArr = new Uint8Array(32);
-let randomBytes = new Uint8Array(32);
+// $: newByreArr = new Uint8Array(32);
+// let randomBytes = new Uint8Array(32);
     const log = console.log;
 
     const makeWallet = async () =>{
@@ -45,7 +44,6 @@ let randomBytes = new Uint8Array(32);
 }
 
 
-
 //  newWallet =  makeWallet(randomBytes)
 const handleClick = async () => {
     newWallet =  makeWallet();
@@ -55,9 +53,7 @@ const handleClick = async () => {
 
 <div class="conatainer">
     <button class="btn" on:click={handleClick}>NewWallet</button>
-  
-    
-    
+     
     {#if newWallet != null}
     {#await newWallet}
         <p>waiting</p>

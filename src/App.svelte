@@ -1,5 +1,10 @@
 <script>
 import MakeAddr from "./lib/MakeAddr.svelte";
+import Toggle from './lib/Toggle.svelte'
+import DonateQR from './lib/DonateQR.svelte'
+
+const addr = 'ecash:qqwp0j423n9wenhd9dkmgr06cm7g2m7mmvgsa3hnmc'
+
 </script>
 
 <main>
@@ -8,6 +13,13 @@ import MakeAddr from "./lib/MakeAddr.svelte";
     <h1>eCash</h1>
     <h2>Paper wallet</h2>
     <MakeAddr/>
+  </div>
+  <div class="content">
+  <Toggle  isActive={false}>  
+    <p>ecash:qqwp0j423n9wenhd9dkmgr06cm7g2m7mmvgsa3hnmc</p>
+    <DonateQR codeValue={addr} squareSize=200 />
+    
+ </Toggle>
   </div>
 </main>
 
@@ -50,6 +62,13 @@ import MakeAddr from "./lib/MakeAddr.svelte";
         display: flex;
         justify-content: center;
         flex-direction: column;
+        
+    }
+    .content{
+     
+      bottom: 0;
+      justify-content: center;
+    
     }
   
 </style>

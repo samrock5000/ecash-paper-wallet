@@ -20,19 +20,26 @@
           height: squareSize,
           colorDark : "#000000",
           colorLight : "#C9CAD6",
-          correctLevel : QRCode.CorrectLevel.H
+         
               });		
               
           };				
         
       });
   </script>
+
+
+<div class="container">
+  <div id="qrcode"></div>
+</div>
+
+
   
   <style>
     #qrcode { 
       width:20px;
       height:200x;
-      margin-top:15px;
+      margin-top:2rem;
     }
 
     .container{
@@ -41,9 +48,4 @@
         margin-right: 11rem;
     }
   </style>
-  <div class="container">
-    <div id="qrcode"></div>
-  
-  </div>
-  
   
